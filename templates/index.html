@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>House Price Predictor</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color:#121212;
+            color: #003366;
+            font-family: 'Arial', sans-serif;
+        }
+        .container {
+            max-width: 600px;
+            margin: 60px auto;
+        }
+        .card {
+            background: #ffffff;
+            color: #003366;
+            border-radius: 12px;
+            box-shadow: 0px 0px 15px rgba(0, 51, 102, 0.2);
+            padding: 25px;
+            border: 1px solid #003366;
+        }
+        .card-header {
+            text-align: center;
+            font-size: 26px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #003366;
+        }
+        label {
+            font-weight: bold;
+            color: #003366;
+        }
+        .form-control {
+            background-color: #f0f8ff;
+            color: #003366;
+            border: 1px solid #003366;
+            border-radius: 6px;
+        }
+        .btn-primary {
+            background-color: #003366;
+            border: none;
+            color: white;
+            font-weight: bold;
+            padding: 10px;
+            border-radius: 6px;
+        }
+        .btn-primary:hover {
+            background-color: #002244;
+        }
+        #prediction {
+            font-size: 22px;
+            font-weight: bold;
+            color: #003366;
+            text-align: center;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            House Price Predictor
+        </div>
+        <div class="card-body">
+            <form id="priceForm">
+                <div class="mb-3">
+                    <label for="location">Select the Location:</label>
+                    <select class="form-control" id="location" name="location" required>
+                        {% for location in locations %}
+                            <option value="{{ location }}">{{ location }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="bhk">Enter BHK:</label>
+                    <input type="number" class="form-control" id="bhk" name="bhk" placeholder="Enter the BHK" required>
+                </div>
+                <div class="mb-3">
+                    <label for="bath">Number of Bathrooms:</label>
+                    <input type="number" class="form-control" id="bath" name="bath" placeholder="Enter number of bathrooms" required>
+                </div>
+                <div class="mb-3">
+                    <label for="total_sqft">Square Feet Area:</label>
+                    <input type="number" class="form-control" id="total_sqft" name="total_sqft" placeholder="Enter square feet" required>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Predict Price</button>
+            </form>
+            <h3 id="prediction"></h3>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById('priceForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        var formData = new FormData(this);
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', '/predict', true);
+        document.getElementById("prediction").textContent = "Predicting Price...";
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === XMLHttpRequest.DONE) {
+                var price = parseFloat(xhr.responseText);
+                if (!isNaN(price)) {
+                    var formattedPrice = price.toLocaleString('en-IN'); // Formats as per Indian numbering system
+                    document.getElementById("prediction").textContent = "Estimated Price: ₹ " + formattedPrice;
+                } else {
+                    document.getElementById("prediction").textContent = "Error in prediction!";
+                }
+            }
+        };
+        xhr.send(formData);
+    });
+</script>
+
+</body>
+</html>
