@@ -29,6 +29,7 @@ Ridge regression model for prediction.
 Simple web interface using Flask (optional).
 
 Dataset
+
 The dataset contains housing listings from Bengaluru and includes the following fields:
 
 Location.
@@ -96,5 +97,7 @@ Integrate with live property APIs.
 Host the app on platforms like Heroku, Render, or AWS.
 
 Developed By
+
 Gagandeep D
+
 Google Certified UI/UX Designer
