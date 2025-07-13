@@ -32,10 +32,15 @@ Dataset
 The dataset contains housing listings from Bengaluru and includes the following fields:
 
 Location.
+
 Size (converted to BHK).
+
 Total Square Feet.
+
 Number of Bathrooms.
+
 Price (in lakhs).
+
 The dataset was originally sourced from Kaggle and filtered for this project.
 
 Technologies Used : 
@@ -49,7 +54,9 @@ Flask (for building the web app interface)
 How to Run:
 
 Clone the repository.
+
 Open and run the Jupyter Notebook (House_price.ipynb) to preprocess data and train the model.
+
 The model is saved using Pickle as RidgeModel.pki.
 
 To run the web app:
@@ -57,7 +64,8 @@ To run the web app:
 Make sure Flask is installed (pip install flask).
 Run main.py    .
 
-Open http://localhost:5000 in your browser
+Open http://localhost:5000 in your browser. 
+
 Enter inputs like location, sqft, BHK, and bathroom count to get predicted price.
 
 Folder Structure:
@@ -71,14 +79,20 @@ static/ – Optional folder for CSS and JS files (if used) .
 
 Model Details
 Model used: Ridge Regression.
+
 Preprocessing: One-hot encoding, StandardScaler.
+
 R² Score: 0.87 on test data.
+
 Pipeline: Combined preprocessing and model training in a single pipeline.
 
 Future Improvements:
 Try more advanced models like Random Forest or XGBoost.
+
 Add budget-based recommendations.
+
 Integrate with live property APIs.
+
 Host the app on platforms like Heroku, Render, or AWS.
 
 Developed By
