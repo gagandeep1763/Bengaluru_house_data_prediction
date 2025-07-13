@@ -1,4 +1,5 @@
 Bengaluru House Price Prediction
+
 This project focuses on predicting house prices in Bengaluru using a machine learning regression model.
 The goal is to estimate property prices based on inputs like location, total square footage, number of bedrooms (BHK), and number of bathrooms. 
 The model is trained on a real-world housing dataset and includes data preprocessing steps, feature engineering, and model evaluation. 
@@ -30,40 +31,43 @@ Simple web interface using Flask (optional).
 Dataset
 The dataset contains housing listings from Bengaluru and includes the following fields:
 
-Location
-Size (converted to BHK)
-Total Square Feet
-Number of Bathrooms
-Price (in lakhs)
+Location.
+Size (converted to BHK).
+Total Square Feet.
+Number of Bathrooms.
+Price (in lakhs).
 The dataset was originally sourced from Kaggle and filtered for this project.
 
-Technologies Used
-Python
-Pandas, NumPy (data analysis and manipulation)
-Scikit-learn (machine learning)
-Jupyter Notebook (development and visualization)
+Technologies Used : 
+
+Python,
+Pandas, NumPy (data analysis and manipulation),
+Scikit-learn (machine learning),
+Jupyter Notebook (development and visualization),
 Flask (for building the web app interface)
 
-How to Run
+How to Run:
+
 Clone the repository.
 Open and run the Jupyter Notebook (House_price.ipynb) to preprocess data and train the model.
 The model is saved using Pickle as RidgeModel.pki.
 
 To run the web app:
+
 Make sure Flask is installed (pip install flask).
-Run main.py
+Run main.py    .
 
 Open http://localhost:5000 in your browser
-Enter inputs like location, sqft, BHK, and bathroom count to get predicted price
+Enter inputs like location, sqft, BHK, and bathroom count to get predicted price.
 
-Folder Structure
-Bengaluru_House_Data.csv – Raw housing dataset
-Cleaned_data.csv – Processed data after cleaning
-House_price.ipynb – Jupyter Notebook for development and training
-RidgeModel.pki – Saved trained model using Pickle
-main.py – Flask backend for prediction interface
-templates/ – HTML templates for Flask UI
-static/ – Optional folder for CSS and JS files (if used)
+Folder Structure:
+Bengaluru_House_Data.csv – Raw housing dataset .
+Cleaned_data.csv – Processed data after cleaning .
+House_price.ipynb – Jupyter Notebook for development and training .
+RidgeModel.pki – Saved trained model using Pickle .
+main.py – Flask backend for prediction interface .
+templates/ – HTML templates for Flask UI .
+static/ – Optional folder for CSS and JS files (if used) .
 
 Model Details
 Model used: Ridge Regression.
