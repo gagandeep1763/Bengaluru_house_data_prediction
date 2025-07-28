@@ -1,5 +1,6 @@
-Flask
+fastapi
+uvicorn
+gunicorn
 pandas
 numpy
-scikit-learn
-gunicorn
+scikit-learn==1.6.1
