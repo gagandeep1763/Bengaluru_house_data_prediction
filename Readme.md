@@ -5,6 +5,8 @@ The goal is to estimate property prices based on inputs like location, total squ
 The model is trained on a real-world housing dataset and includes data preprocessing steps, feature engineering, and model evaluation. 
 An optional Flask-based web application allows users to input details and get instant price predictions.
 
+![Output](https://github.com/gagandeep1763/Bengaluru_house_data_prediction/raw/main/output%201.png)
+
 Overview
 The primary aim of this project is to create a machine learning model that can accurately predict housing prices. 
 It involves cleaning raw data, engineering features, handling outliers, and training a regression model.
