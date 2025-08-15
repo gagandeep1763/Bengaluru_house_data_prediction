@@ -5,6 +5,19 @@ This project provides two different interfaces for predicting house prices in Be
 1. **Flask Web Application** (`main.py`)
 2. **Streamlit Application** (`streamlit_app.py`)
 
+## Streamlit App Screenshots
+
+All images show different features of the Streamlit application:
+
+| Main Interface | Market Insights |
+|----------------|----------------|
+| ![Main Interface](image1.png) | ![Market Insights](image2.png) |
+
+| Top Expensive Areas | Price Analysis |
+|-------------------|----------------|
+| ![Top Expensive Areas](image3.png) | ![Price Analysis](image4.png) |
+
+
 ## Features
 
 - 🏠 Predict house prices based on location, BHK, bathrooms, and square footage
