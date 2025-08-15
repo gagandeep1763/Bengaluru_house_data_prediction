@@ -11,11 +11,11 @@ All images show different features of the Streamlit application:
 
 | Main Interface | Market Insights |
 |----------------|----------------|
-| ![Main Interface](image1.png) | ![Market Insights](image2.png) |
+| ![Main Interface](https://github.com/gagandeep1763/Bengaluru_house_data_prediction/blob/main/image%201.png?raw=true) | ![Market Insights](https://github.com/gagandeep1763/Bengaluru_house_data_prediction/blob/main/image%202.png?raw=true) |
 
 | Top Expensive Areas | Price Analysis |
 |-------------------|----------------|
-| ![Top Expensive Areas](image3.png) | ![Price Analysis](image4.png) |
+| ![Top Expensive Areas](https://github.com/gagandeep1763/Bengaluru_house_data_prediction/blob/main/image%203.png?raw=true) | ![Price Analysis](https://github.com/gagandeep1763/Bengaluru_house_data_prediction/blob/main/image%204.png?raw=true) |
 
 
 ## Features
