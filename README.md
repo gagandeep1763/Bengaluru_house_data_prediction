@@ -9,7 +9,7 @@ This project provides two different interfaces for predicting house prices in Be
 
 All images show different features of the Streamlit application:
 
-| Main Interface | Market Insights |
+| Main Interface | Hero Section Insights |
 |----------------|----------------|
 | ![Main Interface](https://github.com/gagandeep1763/Bengaluru_house_data_prediction/blob/main/image%201.png?raw=true) | ![Market Insights](https://github.com/gagandeep1763/Bengaluru_house_data_prediction/blob/main/image%202.png?raw=true) |
 
